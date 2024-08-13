@@ -4,16 +4,6 @@ import java.io.File;
 
 import javax.swing.*;
 
-/**
- * The UI for the Grid. This will leverage processCommand() to interact with the grid.
- * <p>TODO: <ul>
- * <li>Add the FileOpen dialog to load/save files</li>
- * <li>make inline cell editing better. Still doesn't work great when modifying text cells</li>
- * <li>enable better sizing of the cell width.</li>
- * <li>enable the number of rows/cols to grow without clearing the grid</li>
- * <li>enable the number of rows/cols to shink if those cells are empty or unreferenced</li>
- * </ul>
- */
 public class MainUI extends JFrame {
 
 	// This is for some warning regarding a serializable class
@@ -41,9 +31,6 @@ public class MainUI extends JFrame {
 		cols = 1 + Integer.parseInt(engine.processCommand("cols"));
 
 		textGrid = new JTextField[rows][cols];
-		
-		// this is important so that the process will close when the user
-		// clicks on the red X.
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		createPanel();
@@ -86,7 +73,6 @@ public class MainUI extends JFrame {
 		cmd += expr;
 		String result = engine.processCommand(cmd);
 
-		// TODO: truncate the display better
 		if (result != null && result.length() > 0) {
 			outputWindow.setText(result);
 		}
@@ -121,8 +107,6 @@ public class MainUI extends JFrame {
 					}
 				});
 
-				// TODO: for this "enter key" action, put focus
-				// to the next cell
 				cell.addActionListener((e) -> updateCellDisplay(r ,c));
 			}
 		}
@@ -160,7 +144,6 @@ public class MainUI extends JFrame {
 		String result = null;
 		boolean updateGrid = false;
 		
-		// TODO: handle save file and refactor into a method
 		if (input.getText().equalsIgnoreCase("load")) {
          // Creates a new JFileChooser object
          JFileChooser chooser = new JFileChooser();
@@ -242,9 +225,6 @@ public class MainUI extends JFrame {
 		for (int row = 0; row < rows; row++) {
 			for (int col = 0; col < cols; col++) {
 				JTextField cell = new JTextField();
-				// the default size of the text fields is 20,20
-				// so that the display will have an acceptable size
-				// TODO: Review cell.setSize(). appears to have no effect.
 				cell.setSize(new Dimension(20, 20));
 				this.textGrid[row][col] = cell;
 				
