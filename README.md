@@ -34,19 +34,6 @@ To use the program:
 
 5. Utilize the "help" function for assistance with commands and usage.
 
-## Example
-
-Here is a basic example of how to use the program:
-
-```java
-// Example usage code snippet
-GridManager grid = new GridManager(10, 7);
-grid.setData(1, 1, 10.5); // Set a real number
-grid.setData(2, 2, "Sample Data"); // Set a string
-grid.setData(3, 3, "=SUM(A1:A3)"); // Set a formula
-grid.printGrid(); // Display the grid
-```
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
