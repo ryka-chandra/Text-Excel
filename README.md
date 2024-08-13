@@ -1,5 +1,5 @@
 # Text-Excel
-A Take on Microsoft Excel
+A take on Microsoft Excel
 
 ## Overview
 
