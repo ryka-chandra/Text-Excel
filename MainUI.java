@@ -202,9 +202,7 @@ public class MainUI extends JFrame {
 
 		JPanel inputPanel = new JPanel();
 		inputPanel.setLayout(new BoxLayout(inputPanel, BoxLayout.X_AXIS));
-		// Review: Is this 50 necessary and correct?
 		input = new JTextField(50);
-		// Review: is this dimension the best way?
 		inputPanel.setMaximumSize(new Dimension(1920, inputPanel.getMinimumSize().height));
 
 		inputPanel.add(input);
@@ -227,9 +225,6 @@ public class MainUI extends JFrame {
 				JTextField cell = new JTextField();
 				cell.setSize(new Dimension(20, 20));
 				this.textGrid[row][col] = cell;
-				
-				// would be cool to set this to true so that the
-				// user can edit the cell directly
 				cell.setEditable(true);
 				gridPanel.add(cell);
 			}
