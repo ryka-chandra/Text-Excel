@@ -47,10 +47,6 @@ grid.setData(3, 3, "=SUM(A1:A3)"); // Set a formula
 grid.printGrid(); // Display the grid
 ```
 
-## Contributors
-
-- Ryka Chandra
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
