@@ -18,7 +18,7 @@ This program manages data in a 10x7 grid layout, supporting various data types s
 
 To use the program:
 
-1. Clone the repository to your local machine:
+1. Clone the repository to your local machine
 
 2. Compile the program:
    ```bash
